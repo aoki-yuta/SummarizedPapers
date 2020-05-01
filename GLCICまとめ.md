@@ -1,5 +1,4 @@
 # Globally and Locally Consistent Image Completion
-ああああぶらんちテスト
 http://iizuka.cs.tsukuba.ac.jp/projects/completion/data/completion_sig2017.pdf
 
 ## 著者
@@ -35,7 +34,7 @@ CNNを用いた画像処理
 2. 大域的整合性ネットワーク（ディスクリミネータ）
 3. 局所的整合性ネットワーク（ディスクリミネータ）
 
-[画像](https://user-images.githubusercontent.com/60776249/80776952-a48cb580-8b9e-11ea-82d2-effd89588d8f.png)
+![画像](https://user-images.githubusercontent.com/60776249/80776952-a48cb580-8b9e-11ea-82d2-effd89588d8f.png)
 
 ## この論文の主定理，もしくは鍵となる式・図は？（最大2個まで）
 
