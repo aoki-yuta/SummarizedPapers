@@ -1,5 +1,5 @@
 # Globally and Locally Consistent Image Completion
-ああああ
+ああああぶらんちテスト
 http://iizuka.cs.tsukuba.ac.jp/projects/completion/data/completion_sig2017.pdf
 
 ## 著者
