@@ -29,11 +29,12 @@ GANを用いたcontext encoder で　
 ピクセルごとの平均二乗誤差とGANの損失関数を組み合わせて学習（ディスクリミネータを用いないで二乗誤差のみで学習すると画像がぼやける）
 #### ○利点
 * 新しいオブジェクトを生成できる
-* 周りとの連続が考慮されていない（結果として連続に見えるが不自然になる）
+* "意味"を反映できる
 
 #### ×問題点
 * 画像サイズ、欠損領域が固定
 * 処理に時間がかかる
+* 周りとの連続が考慮されていない（結果として連続に見えるが不自然になる）
 
 
 ## この論文ではどういうアプローチで問題を解決する？
@@ -123,3 +124,7 @@ CelebAデータセットを用いて顔画像の復元タスクを行う．
 ![FailCase](https://user-images.githubusercontent.com/60776249/80818660-95455080-8c0e-11ea-8f66-629fef9678e9.png)
 
 ![FailCase](https://user-images.githubusercontent.com/60776249/80818793-c6be1c00-8c0e-11ea-920b-b89f813c4b23.png)
+
+## 実装はある？
+ある
+https://github.com/satoshiiizuka/siggraph2017_inpainting
