@@ -128,5 +128,6 @@ CelebAデータセットを用いて顔画像の復元タスクを行う．
 ![FailCase](https://user-images.githubusercontent.com/60776249/80818793-c6be1c00-8c0e-11ea-920b-b89f813c4b23.png)
 
 ## 実装はある？
-あるTorch7(luaベースのtorch(?))
+ある   
+Torch7(luaベースのtorch(?))でモデルを動かすことはできるがトレーニング用のソースコードはない（？）
 https://github.com/satoshiiizuka/siggraph2017_inpainting
