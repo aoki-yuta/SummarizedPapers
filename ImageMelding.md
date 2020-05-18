@@ -110,7 +110,9 @@ Single-Source synthesize(単一画像からのインペインディング)では
 
 #### 3.Screend Poison reconstructionステップ
 画像の画素値と勾配の両方を考慮したポアソン方程式を解くことで，画像Tを得る.画像Tは以下の式で表される．
+
 ![T](https://latex.codecogs.com/gif.latex?T%20%3D%20%5Carg%20%5Cmin_I%20%5C%7BD%28I%2C%5Coverline%20T%29&plus;%5Clambda%20D%28%5Cnabla%20I%2C%20%5Coverline%7B%5Cnabla%20T%7D%29%5C%7D)
+
 ここでλは画素値と勾配のどちらを重視するかのパラメータである．
 ポアソン方程式は[Gradient Shop](https://dl.acm.org/doi/10.1145/1731047.1731048)を用いて解かれる（らしい）
 
