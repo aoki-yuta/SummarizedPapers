@@ -13,7 +13,7 @@
 近年の手法では，二つの異なる画像を合成する際，その二つの画像が（全く）異なるテクスチャや構造を持っている時，アーティファクトが発生する．私たちは２つの画像間の領域の遷移？（a transition region：整合性のない色、テクスチャ、構造的の全ての特性が徐々に一つの画像からもう一つの画像に先するような操作）を合成のための新しい手法を提案する.私たちはこれを"Image Melding"と呼ぶ．私たちの手法は３つの重要な一般化を含むパッチベースの最適化の基礎の上に成り立つ。
 1. （追加の幾何、輝度を考慮した変形を行うことで）パッチサーチの探索空間をよりリッチにした
 2. 画像勾配をパッチ表現に拡張し、一般的な画像平均を選ばれたポアソン分布の解で置き換える？
-3. 新しいL2ノルムとL0ノルムを合わせた新しい目的関数を色と勾配のために提案する．これはテクスチャのシャープネスを損ねずに二つの画像間で段階的な変化を与える    
+3. 新しいL2ノルムとL0ノルムを合わせた新しい目的関数を色と勾配のために提案する．これはテクスチャのシャープネスを損ねずに二つの画像間で段階的な変化を与える
 
 ３つの一般化によってパッチベースの解決法によって一貫性のない画像を含む様々な画像間で起こるImageMeldingの課題の解決ができるようになった（課題：オブジェクトのクローン，複雑なパノラマの作成，多様な写真の穴埋め（インペインティング），画像調和）．それぞれのケースで我々の統合された手法は過去の（特にこれらのアプリケーションに向けて作られた）SOTAを上回った．
 
@@ -98,11 +98,11 @@ Single-Source synthesize(単一画像からのインペインディング)では
 2. 各ピクセルに対し，サンプルされたw×w個のパッチの画素を平均する（この論文ではLab色空間を使っている）
 3. 各ピクセルに対し，サンプルされたw×w個のパッチの勾配を平均する．
 
-この時,領域T内のあるピクセル(i,j)について，投票後の画素値![Tbar](https://latex.codecogs.com/gif.latex?%5Coverline%20%7B%5Cnabla%20T%7D%28i%2Cj%29),及び勾配![nTbar](https://latex.codecogs.com/gif.latex?%5Coverline%20%7BT%7D%28i%2Cj%29)はサンプルしたパッチから平均を求めたもので，以下の式で求まる．  
+この時,領域T内のあるピクセル(i,j)について，投票後の画素値![Tbar](https://latex.codecogs.com/gif.latex?%5Coverline%20%7B%5Cnabla%20T%7D%28i%2Cj%29),及び勾配![nTbar](https://latex.codecogs.com/gif.latex?%5Coverline%20%7BT%7D%28i%2Cj%29)はサンプルしたパッチから平均を求めたもので，以下の式で求まる．
 
 ![image](https://latex.codecogs.com/gif.latex?%5Coverline%20%7B%20T%7D%28i%2Cj%29%3D%5Csum%20_%7B%5Csubstack%7Bk%3D0...w-1%20%5C%5C%20l%3D0...w-1%7D%7D%5Cfrac%7BNN%28Q_%7Bi-k%2Cj-l%7D%29%28k%2Cl%29%7D%7Bw%5E2%7D)
 
-![image](https://latex.codecogs.com/gif.latex?%5Coverline%20%7B%5Cnabla%20T%7D%28i%2Cj%29%3D%5Csum%20_%7B%5Csubstack%7Bk%3D0...w-1%20%5C%5C%20l%3D0...w-1%7D%7D%5Cfrac%7BNN%28Q_%7Bi-k%2Cj-l%7D%29%28k%2Cl%29%7D%7Bw%5E2%7D)  
+![image](https://latex.codecogs.com/gif.latex?%5Coverline%20%7B%5Cnabla%20T%7D%28i%2Cj%29%3D%5Csum%20_%7B%5Csubstack%7Bk%3D0...w-1%20%5C%5C%20l%3D0...w-1%7D%7D%5Cfrac%7BNN%28Q_%7Bi-k%2Cj-l%7D%29%28k%2Cl%29%7D%7Bw%5E2%7D)
 
 ここで![Q](https://latex.codecogs.com/gif.latex?Q_%7Bi%2Cj%7D)（左上をi,jとする）は注目パッチで，
 ![NN](https://latex.codecogs.com/gif.latex?NN%28Q_%7Bi-k%2Cj-l%7D%29%28k%2Cl%29%7D%7B)は注目パッチに類似するパッチである．（k,l）は類似パッチ内の求めたいピクセルの位置になる．ピクセルに対して全てのパッチの対応する箇所をw<sup>2</sup>で割ることで平均している
