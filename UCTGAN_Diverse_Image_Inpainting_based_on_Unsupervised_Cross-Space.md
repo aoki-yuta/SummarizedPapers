@@ -62,6 +62,10 @@ GANベースのアプローチでは以下の二つの理由からdiverse image 
 
 
 ### Pluralistic Image Completion
+[論文](https://arxiv.org/abs/1903.04227)
+[実装](https://github.com/lyndonzheng/Pluralistic-Inpainting)
+
+
 既存の多様性を持った画像インペインティング手法．
 
 #### 問題点
