@@ -21,7 +21,21 @@
 * ピクセル同士の相関関係を考慮した画像インペインティング
 
 ## 従来のアプローチとその問題点は？
-
+### パッチベース
+周辺から似ているパッチをコピペ
+#### 問題点
+大きな欠損があるとき大域的整合性（意味）の反映が難しい．
+### 学習ベース(GAN)
+#### 1.[context-encoder](https://arxiv.org/abs/1604.07379)
+##### 問題点
+テクスチャ生成に不向き
+#### 2.[GLCIC](http://iizuka.cs.tsukuba.ac.jp/projects/completion/ja/)
+##### 問題点
+穴付近の整合性のために後処理が必要
+#### 3.[High-Resolution Image Inpainting using Multi-Scale Neural Patch Synthesis](https://arxiv.org/abs/1611.09969)
+#### 4.[partialconv](https://arxiv.org/abs/1804.07723)，[Gated Conv](https://arxiv.org/abs/1806.03589)
+##### 問題点
+特徴量の相関関係を明示的に考慮していないため，生成画像に色の不一致がおこる→（提案手法）
 
 ## この論文ではどういうアプローチで問題を解決する？
 最初にラフに補完するネットワークで補完して，パッチ間の類似度を用いてマスク部分を徐々に綺麗にしていく．
