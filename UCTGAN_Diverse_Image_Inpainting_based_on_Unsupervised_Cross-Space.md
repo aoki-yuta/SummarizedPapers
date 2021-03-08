@@ -76,7 +76,7 @@ GANベースのアプローチでは以下の二つの理由からdiverse image 
 
 この時途中で低次元に圧縮することでモード崩壊を防ぎ，復元画像の多様性を高めている．
 
-Pluralistic_Image_Completionと似た構造．しかしデータセットのうち一枚の特徴量とマスク画像の特徴量をCross Semantic Attentionによって合成している．
+Pluralistic_Image_Completionと似た構造．Pluralistic_Image_Completionでは，マスクの外側をKLに用いていたのに対して，UCTGANではデータセットのうち一枚を用いる．データセットのうち一枚の特徴量とマスク画像の特徴量をCross Semantic Attentionによって合成している．
 
 ![](https://i.gyazo.com/68171287f7fb2e142ebcd55800407107.png)
 
