@@ -27,6 +27,12 @@
 
 ## この論文ではどういうアプローチで問題を解決する？
 CVAE（Conditional Variational Auto Encoder）をGANのジェネレータとして組み込むことで多様性のあるインペインティングを実現している．
+ただし，CVAEをそのまま実装すると，
+![](https://i.gyazo.com/eee2e6050a6a55ca5ff70ff32d7dfb56.png)になる．このまま学習するとKL項を0に近づけるように学習してしまい，結果として決定論的な学習に近くなってしまう．そこで，マスク以外の領域を用いてVAEのパラメータを求めるアイデアを用いる．ここで
+![](https://i.gyazo.com/3b5812a9283b5da1ed3606bde373c6c1.png)と仮定すると，
+
+![](https://i.gyazo.com/e196378eae003ff705dc69c71c121007.png)となる．これを最小化する．
+
 ### 　ネットワーク
 ![network](https://i.gyazo.com/6c4d2e12e9ccfafb5b843da34385ed47.png)
 * 二つのパスを持ったネットワークアーキテクチャ．
@@ -40,7 +46,7 @@ CVAE（Conditional Variational Auto Encoder）をGANのジェネレータとし�
 
 ## この論文の主定理，もしくは鍵となる式・図は？（最大2個まで）
 ![network](https://i.gyazo.com/6c4d2e12e9ccfafb5b843da34385ed47.png)
-![](https://i.gyazo.com/58acf8b2c8c7bf894ef8256e6306a0f1.png)
+![](https://i.gyazo.com/e196378eae003ff705dc69c71c121007.png)
 
 ## この論文で何が出来るようになった？and/or 何が良くなった？　
 * 多様性を持った画像の生成が可能となった．
@@ -78,3 +84,4 @@ Short+Long Term Attentionは上手く画面外から特徴を得ている．→�
 ある(PyTorch)
 
 [Github](https://github.com/lyndonzheng/Pluralistic-Inpainting)
+
