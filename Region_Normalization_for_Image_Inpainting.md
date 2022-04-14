@@ -69,7 +69,7 @@ K=2が一般的な欠損．K=1の時インスタンスノルム
 
 ### ネットワーク
 [EdgeConnect](https://arxiv.org/abs/1901.00212)のINをRNに置き換え.前半はRN-B，後半はRN-L  
-![](https://i.gyazo.com/8380065d6c77d97b7334ecc797e39553.png)
+![](https://i.gyazo.com/8380065d6c77d97b7334ecc797e39553.png)  
 ↓↓↓↓↓
 ![](https://i.gyazo.com/26978ce73829b46708e3d2b629f932dc.png)
 
