@@ -1,4 +1,4 @@
-# Coherent_Semantic_Attention
+# coherent semantic attention for image inpainting
 
 
 [論文ページ](https://arxiv.org/abs/1905.12384)  
